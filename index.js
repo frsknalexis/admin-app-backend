@@ -14,6 +14,10 @@ dbConnection();
 
 app.use('/admin-app/v1/users', require('./routes/users'));
 app.use('/admin-app/v1/login', require('./routes/auth'));
+app.use('/admin-app/v1/hospitales', require('./routes/hospitales'));
+app.use('/admin-app/v1/medicos', require('./routes/medicos'));
+app.use('/admin-app/v1/search', require('./routes/searchs'));
+app.use('/admin-app/v1/upload', require('./routes/uploads'));
 
 app.listen(process.env.PORT, () => {
     console.log('Server run on port: ' + process.env.PORT);

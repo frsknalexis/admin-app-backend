@@ -5,11 +5,21 @@ const { generateJwt } = require("../helpers/jwt");
 
 const getUsers = async (req, res) => {
 
-    const users = await User.find({}, 'name email password role google');
+    const from = Number(req.query.from) || 0;
+
+    const to = Number(req.query.to) || 5;
+
+    const [ users, total ] = await Promise.all([
+        User.find({}, 'name email password role google image')
+            .skip(from)
+            .limit(to),
+        User.countDocuments()
+    ]);
 
     res.json({
         ok: true,
-        users
+        users,
+        total
     });
 };
 
