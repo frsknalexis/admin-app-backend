@@ -12,6 +12,8 @@ app.use(express.json());
 
 dbConnection();
 
+app.use(express.static('public'));
+
 app.use('/admin-app/v1/users', require('./routes/users'));
 app.use('/admin-app/v1/login', require('./routes/auth'));
 app.use('/admin-app/v1/hospitales', require('./routes/hospitales'));
