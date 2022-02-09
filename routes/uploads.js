@@ -9,6 +9,6 @@ router.use(fileUpload());
 
 router.put('/:type/:id', validateJwt, uploadImage);
 
-router.get('/:type/:image', validateJwt, showImage);
+router.get('/:type/:image', showImage);
 
 module.exports = router;

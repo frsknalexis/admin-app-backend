@@ -97,9 +97,12 @@ const refreshToken = async (req, res = response) => {
 
     const token = await generateJwt(userId);
 
+    const user = await User.findById(userId);
+
     res.json({
         ok: true,
-        token
+        token,
+        user
     });
 };
 

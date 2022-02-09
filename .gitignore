@@ -3,3 +3,18 @@
 
 # IDEs and editors
 /.idea
+
+/uploads/hospitales/**.jpg
+/uploads/hospitales/**.png
+/uploads/hospitales/**.jpeg
+/uploads/hospitales/**.gif
+
+/uploads/medicos/**.jpg
+/uploads/medicos/**.png
+/uploads/medicos/**.jpeg
+/uploads/medicos/**.gif
+
+/uploads/users/**.jpg
+/uploads/users/**.png
+/uploads/users/**.jpeg
+/uploads/users/**.gif
